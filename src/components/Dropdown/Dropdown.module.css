@@ -1,0 +1,23 @@
+.Dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(235, 232, 80);
+}
+
+.DropdownBox {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu {
+    border: 1mm solid rgba(43, 148, 197, 0.6);
+    background-color: rgb(143, 223, 106);
+    color: rgb(151, 14, 14);
+}
