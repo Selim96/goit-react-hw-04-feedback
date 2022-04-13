@@ -1,0 +1,17 @@
+.statisticsList {
+    padding-left: 20px;
+}
+
+.statisticsItem {
+    margin-bottom: 10px;
+}   
+
+.statisticsText {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.value {
+    color: var(--title-color);
+    font-size: 20px;
+}

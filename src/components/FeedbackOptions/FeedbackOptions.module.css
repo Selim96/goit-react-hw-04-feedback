@@ -1,0 +1,29 @@
+.list {
+    display:  flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 20px;
+}
+
+.item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.button {
+    padding: 0 10px;
+    height: 30px;
+    text-transform:capitalize;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--title-color);
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px var(--shadov-color);
+    cursor: pointer;
+    outline: none;    
+}
+
+.button:hover {
+    background-color:var(--button-hover);
+    color: var(--primery-color);
+}

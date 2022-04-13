@@ -1,24 +1,26 @@
 import s from './Statistics.module.css';
 
-function Statistics({good, neutral, bad, total, positivePercentage, }) {
+
+function Statistics({ good, neutral, bad, total, positivePercentage,}) {
+  
     return (
-        <ul className='statisticsList'>
-            <li className='statisticsItem'>
-                <p className='statisticsText'>Good:{ good }</p>
-            </li>
-            <li className='statisticsItem'>
-                <p className='statisticsText'>Neutral:{ neutral }</p>
-            </li>
-            <li className='statisticsItem'>
-                <p className='statisticsText'>Bad:{ bad }</p>
-            </li>
-            <li className='statisticsItem'>
-              <p className='statisticsText'>Total:{total }</p>
-            </li>
-            <li className='statisticsItem'>
-              <p className='statisticsText'>Positive feedback:{` ${positivePercentage}% `}</p>
-            </li>
-          </ul>
+    <ul className={s.statisticsList}>
+      <li className={s.statisticsItem}>
+          <p className={s.statisticsText}>Good: <span className={s.value}>{ good }</span></p>
+      </li>
+      <li className={s.statisticsItem}>
+          <p className={s.statisticsText}>Neutral: <span className={s.value}>{ neutral }</span></p>
+      </li>
+      <li className={s.statisticsItem}>
+          <p className={s.statisticsText}>Bad: <span className={s.value}>{ bad }</span></p>
+      </li>
+      <li className={s.statisticsItem}>
+        <p className={s.statisticsText}>Total: <span className={s.value}>{ total }</span></p>
+      </li>
+      <li className={s.statisticsItem}>
+        <p className={s.statisticsText}>Positive feedback: <span className={s.value}>{`${positivePercentage}%`}</span></p>
+      </li>
+    </ul>
     );
 }
 

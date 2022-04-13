@@ -1,6 +1,3 @@
-import Counter from './FOLDER/Exempal';
-import Dropdown from './Dropdown/Dropdown';
-// =============================================
 import React, { Component } from 'react';
 import Statistics from './Statistics/Statistics';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
@@ -34,16 +31,15 @@ class App extends Component {
     const total = this.countTotalFeedback();
     
     return (
-      <div>
+      <>
       <Section title='Please leave feedback'>
         <FeedbackOptions options={options} onLeaveFeedback={this.handlClick} />
       </Section>
-        <Section title='Statistics'>
-          {total === 0 ? <Notification message="There is no feedback"/> : <Statistics good={good} neutral={neutral} bad={bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()}/>}
+      <Section title='Statistics'>
+        {total === 0 ? <Notification message="There is no feedback"/> : <Statistics good={good} neutral={neutral} bad={bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()}/>}
       </Section>
-    </div>
+    </>
     )
-    
   };
 };
 

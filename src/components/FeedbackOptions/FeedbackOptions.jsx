@@ -5,9 +5,9 @@ function FeedbackOptions({options, onLeaveFeedback,}) {
         <ul className={s.list}>
             {options.map( option => (
                 <li key={option} className={s.item}>
-                    <button type='button' className='button' onClick={() => onLeaveFeedback(option)}>{option}</button>
+                    <button type='button' className={s.button} onClick={() => onLeaveFeedback(option)}>{option}</button>
                 </li>)
-        )}
+            )}
         </ul>
     );
 }
