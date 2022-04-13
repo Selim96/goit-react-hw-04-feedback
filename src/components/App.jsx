@@ -1,7 +1,8 @@
 import Counter from './FOLDER/Exempal';
 import Dropdown from './Dropdown/Dropdown';
 // =============================================
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import Statistics from './Statistics';
 
 class App extends Component {
   state = {
@@ -39,6 +40,7 @@ class App extends Component {
 
     return (
       <div className=''>
+        <Statistics good={good} neutral={neutral} bad={bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()}/>
       <div>
           <p className='proposal'>Please leave feedback</p>
           <div className='buttonBoard'>
@@ -49,23 +51,7 @@ class App extends Component {
         
         <div className='statistics'>
           <h2 className='title'>Statistics</h2>
-          <ul className='statisticsList'>
-            <li className='statisticsItem'>
-                <p>Good:{ good }</p>
-            </li>
-            <li className='statisticsItem'>
-                <p>Neutral:{ neutral }</p>
-            </li>
-            <li className='statisticsItem'>
-                <p>Bad:{ bad }</p>
-            </li>
-            <li className='statisticsItem'>
-              <p>Total:{this.countTotalFeedback() }</p>
-            </li>
-            <li className='statisticsItem'>
-              <p>Positive feedback:{` ${this.countPositiveFeedbackPercentage()}% `}</p>
-            </li>
-          </ul>
+          
         </div>
       </div>
     </div>
